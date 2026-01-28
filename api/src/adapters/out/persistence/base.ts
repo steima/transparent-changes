@@ -1,4 +1,4 @@
-import { BaseItem } from "../../domain/base.js";
+import { BaseItem } from "../../../domain/base.js";
 
 export interface Repository<T extends BaseItem> {
     findById(id: string): Promise<T | null>;

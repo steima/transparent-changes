@@ -20,7 +20,7 @@ import {
     generateChangelogHandler,
     getPublicChangelogsHandler,
     getPublicChangelogHandler,
-} from "./handlers/index.js";
+} from "./adapters/in/http/handlers/index.js";
 
 const lambdaMiddleware = new FAWSLambdaMiddleware();
 

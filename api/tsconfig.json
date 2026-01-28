@@ -6,10 +6,8 @@
     "baseUrl": ".",
     "paths": {
       "@domain/*": ["./domain/*"],
-      "@handlers/*": ["./src/handlers/*"],
-      "@services/*": ["./src/services/*"],
-      "@repositories/*": ["./src/repositories/*"],
-      "@middleware/*": ["./src/middleware/*"],
+      "@adapters/*": ["./src/adapters/*"],
+      "@application/*": ["./src/application/*"],
       "@config/*": ["./src/config/*"]
     }
   },

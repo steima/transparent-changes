@@ -1,4 +1,4 @@
-import { Project } from "../../domain/project.js";
+import { Project } from "../../../domain/project.js";
 import { InMemoryRepository } from "./base.js";
 
 export class ProjectRepository extends InMemoryRepository<Project> {

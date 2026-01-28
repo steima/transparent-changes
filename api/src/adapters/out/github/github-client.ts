@@ -1,4 +1,4 @@
-import { GitDiff, CommitInfo, FileDiff } from "./changelog-generator.js";
+import { GitDiff, CommitInfo, FileDiff } from "../../../application/services/changelog-generator.js";
 
 export interface GitHubRepository {
     owner: string;
@@ -11,7 +11,7 @@ export interface GitHubTag {
     date: string;
 }
 
-export class GitHubService {
+export class GitHubClient {
     private accessToken: string | null = null;
 
     setAccessToken(token: string): void {
@@ -130,4 +130,4 @@ export class GitHubService {
     }
 }
 
-export const githubService = new GitHubService();
+export const githubClient = new GitHubClient();

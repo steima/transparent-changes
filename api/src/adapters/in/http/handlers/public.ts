@@ -1,10 +1,10 @@
 import { FMiddleware, NotFoundError, ValidationError } from "@loupeat/fmiddleware";
-import { ChangeLogState } from "../../domain/changelog.js";
+import { ChangeLogState } from "../../../../domain/changelog.js";
 import {
     changeLogRepository,
     projectRepository,
     organisationRepository,
-} from "../repositories/index.js";
+} from "../../../out/persistence/index.js";
 
 export async function getPublicChangelogsHandler(
     middleware: FMiddleware

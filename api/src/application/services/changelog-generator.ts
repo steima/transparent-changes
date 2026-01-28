@@ -1,5 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
-import { config } from "../config/index.js";
+import { config } from "../../config/index.js";
 
 export interface GitDiff {
     fromRef: string;

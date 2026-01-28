@@ -1,4 +1,4 @@
-import { ChangeLog } from "../../domain/changelog.js";
+import { ChangeLog } from "../../../domain/changelog.js";
 import { InMemoryRepository } from "./base.js";
 
 export class ChangeLogRepository extends InMemoryRepository<ChangeLog> {

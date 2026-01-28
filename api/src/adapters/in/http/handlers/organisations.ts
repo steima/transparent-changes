@@ -1,8 +1,8 @@
 import { FMiddleware, NotFoundError, ValidationError } from "@loupeat/fmiddleware";
 import { z } from "zod";
-import { Organisation } from "../../domain/organisation.js";
-import { blueprintItemMeta, updateItemMeta } from "../../domain/base.js";
-import { organisationRepository } from "../repositories/index.js";
+import { Organisation } from "../../../../domain/organisation.js";
+import { blueprintItemMeta, updateItemMeta } from "../../../../domain/base.js";
+import { organisationRepository } from "../../../out/persistence/index.js";
 import { authMiddleware } from "../middleware/auth.js";
 
 const createOrganisationSchema = z.object({

@@ -7,10 +7,3 @@ export {
     GeneratedChangelog,
     ChangelogSection,
 } from "./changelog-generator.js";
-
-export {
-    githubService,
-    GitHubService,
-    GitHubRepository,
-    GitHubTag,
-} from "./github.js";

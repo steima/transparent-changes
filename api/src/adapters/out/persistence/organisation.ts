@@ -1,4 +1,4 @@
-import { Organisation } from "../../domain/organisation.js";
+import { Organisation } from "../../../domain/organisation.js";
 import { InMemoryRepository } from "./base.js";
 
 export class OrganisationRepository extends InMemoryRepository<Organisation> {

@@ -1,8 +1,8 @@
 import { FMiddleware, NotFoundError, ValidationError } from "@loupeat/fmiddleware";
 import { z } from "zod";
-import { Project } from "../../domain/project.js";
-import { blueprintItemMeta, updateItemMeta, MultilingualTexts } from "../../domain/base.js";
-import { projectRepository, organisationRepository } from "../repositories/index.js";
+import { Project } from "../../../../domain/project.js";
+import { blueprintItemMeta, updateItemMeta, MultilingualTexts } from "../../../../domain/base.js";
+import { projectRepository, organisationRepository } from "../../../out/persistence/index.js";
 import { authMiddleware } from "../middleware/auth.js";
 
 const multilingualTextSchema = z.record(

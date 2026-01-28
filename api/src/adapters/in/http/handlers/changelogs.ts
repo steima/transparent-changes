@@ -1,14 +1,14 @@
 import { FMiddleware, NotFoundError, ValidationError } from "@loupeat/fmiddleware";
 import { z } from "zod";
-import { ChangeLog, ChangeLogState } from "../../domain/changelog.js";
-import { blueprintItemMeta, updateItemMeta, MultilingualTexts } from "../../domain/base.js";
+import { ChangeLog, ChangeLogState } from "../../../../domain/changelog.js";
+import { blueprintItemMeta, updateItemMeta, MultilingualTexts } from "../../../../domain/base.js";
 import {
     changeLogRepository,
     projectRepository,
-    organisationRepository,
-} from "../repositories/index.js";
+} from "../../../out/persistence/index.js";
 import { authMiddleware } from "../middleware/auth.js";
-import { changelogGeneratorService, githubService } from "../services/index.js";
+import { changelogGeneratorService } from "../../../../application/services/changelog-generator.js";
+import { githubClient } from "../../../out/github/github-client.js";
 
 const multilingualTextSchema = z.record(
     z.object({
@@ -215,10 +215,10 @@ export async function generateChangelogHandler(
     const validated = generateChangelogSchema.parse(body);
 
     if (validated.githubToken) {
-        githubService.setAccessToken(validated.githubToken);
+        githubClient.setAccessToken(validated.githubToken);
     }
 
-    const diff = await githubService.getCompare(
+    const diff = await githubClient.getCompare(
         { owner: validated.githubOwner, repo: validated.githubRepo },
         validated.fromRef,
         validated.toRef
