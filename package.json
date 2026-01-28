@@ -1,0 +1,20 @@
+{
+  "name": "transparent-changes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A platform for AI-powered changelog generation from GitHub repositories",
+  "workspaces": [
+    "api",
+    "app"
+  ],
+  "scripts": {
+    "api:dev": "npm run dev --workspace=api",
+    "api:build": "npm run build --workspace=api",
+    "api:lint": "npm run lint --workspace=api",
+    "app:dev": "npm run dev --workspace=app",
+    "app:build": "npm run build --workspace=app"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
